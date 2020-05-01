@@ -116,7 +116,7 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
 
 
         guacRecipe.setNotes(guacNotes);
-        guacNotes.setRecipe(guacRecipe);
+        //guacNotes.setRecipe(guacRecipe);
 
 
 

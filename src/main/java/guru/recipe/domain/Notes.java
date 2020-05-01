@@ -29,6 +29,7 @@ public class Notes {
 
     public void setRecipe(Recipe recipe) {
         this.recipe = recipe;
+        //recipe.setNotes(this);
     }
 
     public String getRecipeNote() {
