@@ -1,10 +1,13 @@
 package guru.recipe.domain;
 
+import lombok.*;
+
 import javax.persistence.*;
 
 /**
  * Created by @author Kalmaasali on 30/04/2020.
  **/
+@Data
 @Entity
 public class UnitOfMeasure {
     @Id
@@ -15,23 +18,7 @@ public class UnitOfMeasure {
     /*@OneToOne
     private Ingredient ingredient;*/
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String uom) {
-        this.description = uom;
-    }
-
- /*   public Ingredient getIngredient() {
+    /*   public Ingredient getIngredient() {
         return ingredient;
     }
 
