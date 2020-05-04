@@ -1,6 +1,7 @@
 package guru.recipe.domain;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -10,6 +11,7 @@ import java.util.Set;
  * Created by @author Kalmaasali on 29/04/2020.
  **/
 @Data
+//@EqualsAndHashCode(exclude = {"notes","categories"})
 @Entity
 public class Recipe {
     @Id
