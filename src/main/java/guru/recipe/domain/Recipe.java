@@ -49,9 +49,9 @@ public class Recipe {
     public Recipe() {
 
     }
-
-
-
+    public Recipe(Long id) {
+        this.id=id;
+    }
     public void setNotes(Notes notes) {
         this.notes = notes;
         notes.setRecipe(this);
