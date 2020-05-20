@@ -1,5 +1,6 @@
 package guru.recipe.service;
 
+import guru.recipe.commands.RecipeCommand;
 import guru.recipe.domain.Recipe;
 
 import java.util.Set;
@@ -10,4 +11,5 @@ import java.util.Set;
 public interface RecipeService {
     Set<Recipe> getRecipes();
     Recipe findById(Long id);
+    RecipeCommand saveRecipeCommand(RecipeCommand recipeCommand);
 }

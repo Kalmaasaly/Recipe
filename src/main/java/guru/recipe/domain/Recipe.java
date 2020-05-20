@@ -20,8 +20,8 @@ public class Recipe {
     private String description;
     private Integer prepTime;
     private Integer cookTime;
-    private Integer services;
-    private Integer source;
+    private Integer servings;
+    private String source;
     private String url;
     @Lob
     private String directions;
@@ -53,8 +53,10 @@ public class Recipe {
         this.id=id;
     }
     public void setNotes(Notes notes) {
-        this.notes = notes;
-        notes.setRecipe(this);
+        if(notes !=null) {
+            this.notes = notes;
+            notes.setRecipe(this);
+        }
     }
 
     public Recipe addIngredients(Ingredient ingredient){

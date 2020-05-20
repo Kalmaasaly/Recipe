@@ -1,17 +1,15 @@
 package guru.recipe.service;
 
+import guru.recipe.converters.RecipeCommandToRecipe;
+import guru.recipe.converters.RecipeToRecipeCommand;
 import guru.recipe.domain.Recipe;
 import guru.recipe.repositories.RecipeRepository;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.springframework.mock.web.MockMultipartFile;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.util.HashSet;
-import java.util.Optional;
 import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
@@ -27,11 +25,15 @@ public class RecipeServiceImplTest {
     RecipeServiceImpl recipeService;
     @Mock
     RecipeRepository recipeRepository;
+    @Mock
+    RecipeToRecipeCommand recipeToRecipeCommand;
 
+    @Mock
+    RecipeCommandToRecipe recipeCommandToRecipe;
     @Before
     public void setUp() throws Exception{
         MockitoAnnotations.initMocks(this);
-        recipeService=new RecipeServiceImpl(recipeRepository);
+        recipeService=new RecipeServiceImpl(recipeRepository, recipeCommandToRecipe, recipeToRecipeCommand);
     }
     @Test
     public void getRecipes() throws Exception{

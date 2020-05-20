@@ -1,0 +1,23 @@
+package guru.recipe.commands;
+
+import guru.recipe.domain.UnitOfMeasure;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.math.BigDecimal;
+
+/**
+ * Created by @author Kalmaasali on 17/05/2020.
+ **/
+@Getter
+@Setter
+@NoArgsConstructor
+public class IngredientCommand {
+    private Long id;
+    private Long recipeId;
+    private String description;
+    private BigDecimal amount;
+    private UnitOfMeasureCommand uom;
+
+}
