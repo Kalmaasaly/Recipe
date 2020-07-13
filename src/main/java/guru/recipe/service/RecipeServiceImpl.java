@@ -56,4 +56,15 @@ public class RecipeServiceImpl implements RecipeService {
         log.debug("Saved Recipe"+saveRecipe.getId());
         return recipeToRecipeCommand.convert(saveRecipe);
     }
+
+    @Override
+    public RecipeCommand findCommandById(Long l) {
+        return recipeToRecipeCommand.convert(findById(l));
+    }
+
+    @Override
+    public void deleteById(Long idToDelete) {
+        recipeRepository.deleteById(idToDelete);
+
+    }
 }
